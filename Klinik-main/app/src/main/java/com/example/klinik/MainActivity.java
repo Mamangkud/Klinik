@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -39,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
         getData();
     }
 
+    // Proses untuk menampilkan recylerview dengan cardview yang telah dibuat
+    private void processRecycleViewAdapter(){
+        RecyclerView recyclerView = findViewById(R.id.rv_list);
+        RecycleViewAdapter adapter = new RecycleViewAdapter(number,nama_pasien, jenis_kelamin);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
     private void getData(){
         db = new DBmanager(this);
         ArrayList<String> nomor = new ArrayList<>();
@@ -66,8 +75,39 @@ public class MainActivity extends AppCompatActivity {
                         v.getContext().startActivity(intent);
                         finish();
                     }
+
                 });
             }
         }
+
+        //Cursor cursor = db.getData();
+//        db.getData();
+        /*number.add("1");
+
+        nama_pasien.add("Zam zam");
+        jenis_kelamin.add("Pria");
+
+        number.add("2");
+        nama_pasien.add("Sapik1");
+        jenis_kelamin.add("Pria");
+
+        number.add("3");
+        nama_pasien.add("Sapik2");
+        jenis_kelamin.add("Pria");
+
+        number.add("4");
+        nama_pasien.add("Sapik3");
+        jenis_kelamin.add("Pria");
+
+        number.add("5");
+        nama_pasien.add("Sapik4");
+        jenis_kelamin.add("Pria");
+
+        number.add("6");
+        nama_pasien.add("Sapik5");
+        jenis_kelamin.add("Pria");
+
+
+        processRecycleViewAdapter();*/
     }
 }

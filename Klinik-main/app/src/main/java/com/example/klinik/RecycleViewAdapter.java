@@ -46,6 +46,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
                 Intent intent = new Intent(v.getContext(), Input_Pasien.class);
                 v.getContext().startActivity(intent);
             }
+
         });
     }
 
@@ -53,6 +54,11 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     public int getItemCount() {
         number.size();
         return number.size();
+    }
+
+    public void showDialog () {
+        System.out.println("Yes");
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

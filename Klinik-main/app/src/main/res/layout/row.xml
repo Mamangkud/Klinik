@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:clickable="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_row"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/nama_pasien"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@id/number"
+            android:text="Nama : " />
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp"
+            android:text="1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/jenis_kelamin"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nama_pasien"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="-28dp"
+            android:layout_toRightOf="@id/number"
+            android:text="Jenis Kelamin : " />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
